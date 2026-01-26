@@ -263,17 +263,21 @@ This section proves you can offload inference to the Hailo-8 NPU for acceleratio
 **Part C: ROS2 Publisher & Subscriber Demonstration**
 This part showcases your custom ROS2 nodes for communicating detection results over the network.
 
-* **Code Walkthrough (Brief):**
-* First, show the source code for your publisher node on the Jetson. Briefly explain what size models (nano n to extra large x) you chose and why, how you take the output from YOLO (bounding box coordinates, class ID) and publish it as a ROS2 message.
-* Next, show the source code for your subscriber node on the Remote PC. Briefly explain the callback function that receives the message and prints the information to the console.
+* a): Demonstrating Visual Servoing to a Bottle
 
+For part C's a), you need to code a visual servoing code that turns the wheels of the Turtlebot 3 so that the front of the robot faces the target object, a bottle.
 
-* **Live Communication Demo:**
-* On the Jetson, run your YOLO publisher node.
-* On the Remote PC, run your subscriber node in a terminal.
-* Demonstrate that as objects are detected by YOLO on the Jetson, the corresponding bounding box information (Minimum requirement: Class, Bounding Box Location, Box Width, and Box Height in pixels) is immediately printed in real-time by your subscriber on the Remote PC.
+Demonstrate your code by moving the bottle slowly in front of the robot. The robot should lock onto the bottle using the front camera.
 
+To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
 
+* b): Pick and Place with Turtlebot
+
+For part C's b), you need to extend a)’s code so that the Turtlebot 3 faces the bottle, extends the arm, grabs onto the bottle, moves forward for a distance of 3.2ft (1m), and releases the bottle on the ground some distance away from the bottle’s starting location. You can use non-precise ways to achieve this, for example, by applying forward velocity on the wheels for a set time in an open-loop fashion.
+
+Demonstrate your code by placing the bottle at the edge of the field of view of the turtlebot’s camera. The robot should lock onto the bottle using the front camera and complete the mission of approaching, grabbing, and placing it 3.2ft (1m) away without your assistance.
+
+To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
 
 ---
 

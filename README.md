@@ -29,7 +29,7 @@ We use vim (vi) for text editing in a terminal environment. Please refer to the 
 Please head here for an introduction to the YOLO Computer Vision Object Detection Algorithm.
 [https://docs.ultralytics.com/](https://docs.ultralytics.com/)
 
-### Assignment requirement
+### Assignment requirement 
 
 Assignment 4 requires a physical demonstration in front of Professor Tsz-Chiu Au. Please arrange a time with him for a physical demonstration. You need to demonstrate that you can integrate what you have learned about ROS2 and turtlebot and YOLO for missions outlined in milestone 4. The grading for this assignment will be divided into three parts. Please submit the source code of your program after the demo.
 
@@ -42,7 +42,7 @@ Refer to the demo requirement section at the end of the milestone assignment on 
 
 ---
 
-### Part 1: Object Detection on Jetson with CUDA
+### Part 1: Object Detection on Jetson with CUDA 
 
 Part 1 will show you how to run YOLO, a popular object detection and localization algorithm on the Jetson NX. Jetson allows developers to start developing Artificial Intelligence applications on Edge devices with familiar tools present on a normal desktop environment for Nvidia GPUs.
 
@@ -240,12 +240,12 @@ Again, make sure both machines have synced time and are on the same local networ
 
 ---
 
-### Demo Requirements (10-15 Minute Demonstration)
+### Demo Requirements (10-15 Minute Demonstration) - 100 points
 
 We will allow you to have multiple attempts for each demo. For additional accommodations necessary, please contact IA or the professor.
 Your submission must include a single .zip file containing all of your source code.
 
-**Part A: YOLOv11 Demonstration on Jetson GPU**
+**Part A: YOLOv11 Demonstration on Jetson GPU -20 points**
 This part demonstrates your ability to run various YOLOv11 models on the Jetson's GPU using a live camera feed.
 
 * **Object Detection (YOLOv11):** Run the standard YOLOv11 detection model. Point the camera at several different objects (e.g., a person, a bottle, a laptop) and show the model drawing accurate bounding boxes and class labels in real-time.
@@ -253,14 +253,14 @@ This part demonstrates your ability to run various YOLOv11 models on the Jetson'
 * **Segmentation (YOLOv11-Seg):** Run the segmentation model. Point the camera at multiple objects and show the model generating distinct color masks for each detected instance, demonstrating pixel-level recognition.
 * **Prove CUDA Usage:** This is a critical step. While the YOLOv11 models are running, open a new terminal and run `tegrastats`. You must show the output of `tegrastats`, which should indicate that the CUDA cores are active and under load, confirming that inference is running on the CUDA cores.
 
-**Part B: YOLO Base Demonstration on Hailo NPU**
+**Part B: YOLO Base Demonstration on Hailo NPU -10 points**
 This section proves you can offload inference to the Hailo-8 NPU for acceleration.
 
 * **Launch Model:** Run any YOLO object detection model that is specifically compiled for the Hailo-8 NPU.
 * **Demonstrate Detection:** Show the model performing real-time object detection on the live camera feed, similar to Part A.
 * **Prove NPU and SOC Usage:** While the YOLO model is running, open a new terminal and run a Hailo utility command `hailocli monitor`. You must show the output of this command along with `tegrastats`, which should indicate that the Hailo NPU is active and under load while Jetson systems are under relatively low load, confirming that inference is running on the accelerator.
 
-**Part C: ROS2 Publisher & Subscriber Demonstration**
+**Part C: ROS2 Publisher & Subscriber Demonstration -  -35 points each**
 This part showcases your custom ROS2 nodes for communicating detection results over the network.
 
 * a): Demonstrating Visual Servoing to a Bottle

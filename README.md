@@ -240,13 +240,7 @@ python3 object_detection.py -n yolov11x.hef -i camera
 
 ### Part 3: Programming a publisher and a subscriber for YOLO
 
-You need to code a ROS2 publisher script on Jetson that publishes information from the provided YOLO code. For this assignment, consider only the base model, not Pose and Seg models. You can use either CUDA or NPU for your applications.
-
-The following are the expected topics that your code should publish: Bounding box pixel location, Bounding box pixel width, Bounding box pixel height, and Class information. Publishing the camera image is optional.
-
-You also need to code a ROS2 subscriber script on the Remote PC that receives the information from the Jetson and displays the information on the screen. The minimum requirement is similar to the `ros2 topic list`. There is no user interface requirement for the subscriber.
-
-In order to complete part 3, you need to learn how to use ROS 2 to command the turtlebot using your own program. Refer to the Assignment 3 Appendix for help regarding this process. You would also need to investigate what type of ROS 2 messages are appropriate for this task. You might choose to have multiple publishers to achieve this task, declare a custom ROS2 message type, or have the entire output output through ROS 2 String message type to be decoded separately.
+In order to complete part 3, you need to learn how to use ROS 2 to command the turtlebot using your own program. Refer to the Assignment 3 Appendix for help regarding this process. Take a look at the provided publisher and subscriber script for YOLO in the git repository.
 
 Again, make sure both machines have synced time and are on the same local network.
 
@@ -272,10 +266,13 @@ This section proves you can offload inference to the Hailo-8 NPU for acceleratio
 * **Demonstrate Detection:** Show the model performing real-time object detection on the live camera feed, similar to Part A.
 * **Prove NPU and SOC Usage:** While the YOLO model is running, open a new terminal and run a Hailo utility command `hailocli monitor`. You must show the output of this command along with `tegrastats`, which should indicate that the Hailo NPU is active and under load while Jetson systems are under relatively low load, confirming that inference is running on the accelerator.
 
-**Part C: ROS2 Publisher & Subscriber Demonstration -  -35 points each**
-This part showcases your custom ROS2 nodes for communicating detection results over the network.
+**Part C: ROS2 Publisher & Subscriber Demonstration -  -70 points**
 
-* a): Demonstrating Visual Servoing to a Bottle
+This part showcases your ability to integratethe  given ROS2 code for a robotic task.
+
+For slides detailing the arena and detailed rules will be released soon.
+
+* a): Demonstrating Visual Servoing to a Bottle (Task 1) -10 points
 
 For part C's a), you need to code a visual servoing code that turns the wheels of the Turtlebot 3 so that the front of the robot faces the target object, a bottle.
 
@@ -283,11 +280,21 @@ Demonstrate your code by moving the bottle slowly in front of the robot. The rob
 
 To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
 
-* b): Pick and Place with Turtlebot
+* b): Pick the bottle with Turtlebot (Task 1) -10 points
 
-For part C's b), you need to extend a)’s code so that the Turtlebot 3 faces the bottle, extends the arm, grabs onto the bottle, moves forward for a distance of 3.2ft (1m), and releases the bottle on the ground some distance away from the bottle’s starting location. You can use non-precise ways to achieve this, for example, by applying forward velocity on the wheels for a set time in an open-loop fashion.
+For part C's b), you need to extend a)’s code so that the Turtlebot 3 drives to the bottle, faces the bottle, extends the arm and grab onto the bottle. You can use non-precise ways to achieve this, for example, by applying forward velocity on the wheels for a set time in an open-loop fashion.
 
-Demonstrate your code by placing the bottle at the edge of the field of view of the turtlebot’s camera. The robot should lock onto the bottle using the front camera and complete the mission of approaching, grabbing, and placing it 3.2ft (1m) away without your assistance.
+To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
+
+* c): Pick and Place with Turtlebot (Task 2) -20 points
+
+For part C's b), you need to extend a)’s code so that the Turtlebot 3 returns to the base after picking up the bottle, and release the bottle on the ground at the home base near the robot's starting location. You can use non-precise ways to achieve this, for example, by applying forward velocity on the wheels for a set time in an open-loop fashion.
+
+To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
+
+* d): Pick and Place two bottles with Turtlebot (Task 2) -30 points
+
+For part C's d), you need to extend c)’s code so that the Turtlebot 3 repeats the pick and place operation for a total of two bottles. You can use non-precise ways to achieve this, for example, by applying forward velocity on the wheels for a set time in an open-loop fashion.
 
 To complete this requirement, you would need to adapt milestone 3’s teleoperation code and milestone 4’s code for YOLO and integrate them into the code for both the remote PC and Jetson. We recommend using SSH to access the Turtlebot’s Jetson, since the number of Flipbooks is limited.
 

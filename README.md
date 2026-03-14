@@ -6,7 +6,7 @@
 
 ### Introduction
 
-Welcome to CS 7389K. We have prepared a few milestones before the final project, in which you will use a physical robot to execute a mission given by us. The following milestones will give you an idea of how to interact with ROBOTIS’ Turtlebot3 Waffle Pi with a Manipulator Arm using the Robot Operating System 2.
+Welcome to CS 7389K. The following milestones will give you an idea of how to interact with ROBOTIS’ Turtlebot3 Waffle Pi with a Manipulator Arm using the Robot Operating System 2.
 
 In this fourth milestone, you will learn how to use YOLO, a real-time object detection algorithm based on a fully Convolutional Neural Network. YOLO’s input is a camera image fed in real time from a Raspberry Pi v2 camera, and the output would be a bounding box showing which part of the image belongs to which object, with a text label. You will find the tracking accuracy of YOLO to be acceptable, but you will find that labeling may not always be correct. This is because the generic YOLO model is trained on the Microsoft COCO dataset.
 
@@ -22,9 +22,6 @@ Robot Operating System version is associated with Ubuntu Long-Term Support Versi
 For all questions regarding milestone assignments and the robot, **you should contact the Doctoral Instructor Assistant via direct message on Slack**. Please do not contact the Instructor with questions regarding the milestone assignments. This is the URL for Slack for this course. 
 
 <https://spring2026txstrobot.slack.com/>
-
-We use vim (vi) for text editing in a terminal environment. Please refer to the tutorial for Vim if you are not familiar with vim environment for editing documents. 
-<https://opensource.com/article/19/3/getting-started-vim>
 
 Please head here for an introduction to the YOLO Computer Vision Object Detection Algorithm.
 [https://docs.ultralytics.com/](https://docs.ultralytics.com/)

@@ -278,20 +278,20 @@ You can run YOLO v11 with either CPU only or CUDA on your own desktop machine wi
 
 Recommended reading: [https://docs.ultralytics.com/](https://docs.ultralytics.com/)
 
-**[Remote PC]** It is not recommended to install YOLO in a Python virtual environment, such as Conda, if you want it to work well with ROS2 or other binary programs installed through apt-get. This is the primary reason why we did not install a Python virtual environment on Jetson.
+**[Your PC]** It is not recommended to install YOLO in a Python virtual environment, such as Conda, if you want it to work well with ROS2 or other binary programs installed through apt-get. This is the primary reason why we did not install a Python virtual environment on Jetson.
 
 You can deactivate your Python virtual environment temporarily and install Ultralytics packages if you need your virtual environment.
 
-**[Remote PC]** Install GPU drivers such as CUDA and ROCm, Pytorch, and TorchVision. When installing PyTorch and TorchVision, please follow the exact instructions on the official website. [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) .
+**[Your PC]** Install GPU drivers such as CUDA and ROCm, Pytorch, and TorchVision. When installing PyTorch and TorchVision, please follow the exact instructions on the official website. [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) .
 
-**[Remote PC]** On your terminal, install the Ultralytics package and OpenCV
+**[Your PC]** On your terminal, install the Ultralytics package and OpenCV
 
 ```bash
 pip install ultralytics opencv-python
 
 ```
 
-**[Remote PC]** Here is an example YOLO v11 Python code adapted to a desktop environment. We have changed cap interface to webcam for you. Replace `PT_MODEL` with “yolov11-seg.pt” or “yolov11-pose.pt” to convert it to seg or pose models. Refer to above for full list of model names and associated .pt names.
+**[Your PC]** Here is an example YOLO v11 Python code adapted to a desktop environment. We have changed cap interface to webcam for you. Replace `PT_MODEL` with “yolov11-seg.pt” or “yolov11-pose.pt” to convert it to seg or pose models. Refer to above for full list of model names and associated .pt names.
 
 **Desktop YOLO v11 demo code on CPU or CUDA**
 

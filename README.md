@@ -1,6 +1,6 @@
 # 2026 CS 4379K / CS 5342 Introduction to Autonomous Robotics, Robotics and Autonomous Systems
 
-## Programming Assignment: Milestone 4 (V1.05)
+## Programming Assignment: Milestone 4 (V1.1)
 
 **Minhyuk Park and Tsz-Chiu Au**
 
@@ -26,9 +26,7 @@ Please head here for an introduction to the YOLO Computer Vision Object Detectio
 
 ### Assignment requirement 
 
-**Source Code Submission** is required for Milestone Assignment 4 on Canvas.
-
-In addition, as usual, a **hardware video demonstration submission** is required for Milestone Assignment 4. 
+A **hardware video demonstration submission** is required for Milestone Assignment 4. 
 
 You need to demonstrate that you have a working setup and can operate the turtlebot by making videos. This will also demonstrate that you have a working setup for working with a physical turtlebot. Refer to the demo requirement section at the end of the milestone assignment on what to include in the video.
 
@@ -49,6 +47,8 @@ You do not need to edit the videos, and uploading raw **footage** will suffice. 
 Refer to the demo requirement section at the end of the milestone assignment on what to include in the demo. Rules for robot usage will apply for working with the physical Turtlebot3. Please refer to the inventory list given to you separately.
 
 > **Major Changes**
+> 
+> * v 1.1  Submission of source code was changed to optional as part of the request from the instructor.
 > * v 1.05  A lot of requested changes
 > * v 1.0  Initial public release
 
@@ -234,7 +234,7 @@ To pick up the bottle with the robot arm, move the robot arm to home pose, open 
 
 Please refer to the video submission requirements in the introduction.
 
-Your submission must include two items: **links to the video file and a single .zip file containing all of your source code**.
+Your submission must include **links to the video file**.
 
 **Part A: YOLOv11 Demonstration on Jetson GPU -10 points**
 This part demonstrates your ability to run various YOLOv11 models on the Jetson's GPU using a live camera feed.
